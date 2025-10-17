@@ -1,0 +1,327 @@
+/* Custom Styles for SHOP.CO */
+
+:root {
+  --primary-black: #000000;
+  --primary-white: #ffffff;
+  --text-muted: #6c757d;
+  --bg-light: #f5f5f5;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Top Banner */
+.top-banner {
+  position: relative;
+  font-size: 14px;
+}
+
+/* Header */
+.navbar-brand {
+  letter-spacing: -1px;
+}
+
+.search-box {
+  width: 400px;
+}
+
+.search-box input {
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px 10px 45px;
+}
+
+.search-box i {
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #6c757d;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.star-decoration {
+  position: absolute;
+  font-size: 3rem;
+  animation: rotate 4s linear infinite;
+}
+
+.star-1 {
+  top: 10%;
+  right: 10%;
+}
+
+.star-2 {
+  bottom: 20%;
+  left: 5%;
+  font-size: 2rem;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Brands Section */
+.brands-section h4 {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Product Cards */
+.product-card {
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.rating i {
+  font-size: 14px;
+}
+
+/* Style Cards */
+.style-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.style-card:hover {
+  transform: scale(1.02);
+}
+
+.style-card img {
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.style-card:hover img {
+  transform: scale(1.1);
+}
+
+.style-card h4 {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* Testimonials */
+.testimonial-card {
+  height: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Newsletter */
+.newsletter-section {
+  margin-bottom: 50px;
+}
+
+.newsletter-section .input-group-text,
+.newsletter-section .form-control {
+  padding: 12px 20px;
+  border-radius: 50px;
+}
+
+.newsletter-section .btn {
+  padding: 12px 20px;
+  border-radius: 50px;
+}
+
+/* Footer */
+footer a:hover {
+  color: var(--primary-black) !important;
+}
+
+.social-icons .btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e0e0e0;
+}
+
+.social-icons .btn:hover {
+  background-color: var(--primary-black);
+  color: white;
+  border-color: var(--primary-black);
+}
+
+/* Buttons */
+.btn-dark {
+  background-color: var(--primary-black);
+  border-color: var(--primary-black);
+}
+
+.btn-dark:hover {
+  background-color: #333;
+  border-color: #333;
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--primary-black);
+  border-color: var(--primary-black);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .search-box {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .style-card img {
+    height: 200px;
+  }
+
+  .star-decoration {
+    font-size: 2rem;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-card,
+.testimonial-card,
+.style-card {
+  animation: fadeIn 0.6s ease-out;
+ }
+ .hero-section {
+  position: relative;
+  background: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0,0,0,0.1)),
+    url('/images/p1.jpeg') center center / cover no-repeat fixed;
+  color: white;
+}
+
+.hero-section h1,
+.hero-section p,
+.hero-section button,
+.hero-section small {
+  color: white !important;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+  z-index: 1;
+}
+.hero-section {
+  position: relative;
+  background: url('/images/p1.jpeg') center center / cover no-repeat fixed;
+  color: #111; /* لون غامق للكلام عشان يبان */
+}
+
+/* تنسيق النصوص عشان تبقى واضحة فوق الخلفية */
+.hero-section h1,
+.hero-section p,
+.hero-section button,
+.hero-section small {
+  color: #111 !important; /* لون غامق ومقروء */
+}
+
+/* تأكيد إن المحتوى فوق الصورة مش يتأثر */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* نلغي أي طبقة أو تأثير عتمة سابق */
+.hero-section::before {
+  content: none;
+}
+.hero-section {
+  position: relative;
+  background: url('/images/p1.jpeg') center center / cover no-repeat;
+  color: #111; /* لون غامق عشان الكلام يبان */
+}
+
+/* تنسيق النصوص */
+.hero-section h1,
+.hero-section p,
+.hero-section button,
+.hero-section small {
+  color: #111 !important;
+}
+
+/* المحتوى فوق الصورة */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* نلغي أي طبقة أو تأثير سابق */
+.hero-section::before {
+  content: none;
+}
